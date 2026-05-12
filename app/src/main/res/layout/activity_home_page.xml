@@ -82,7 +82,7 @@
         android:textColor="@color/white"
         android:textSize="50dp"
         tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="596dp" />
+        tools:layout_editor_absoluteY="586dp" />
 
     <ImageView
         android:id="@+id/imageView2"
