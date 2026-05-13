@@ -26,7 +26,6 @@
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/email_username"
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
         android:minHeight="60dp"
@@ -38,7 +37,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView3"
         tools:ignore="LabelFor,MissingConstraints"
-        tools:text="Email/Username" />
+        tools:text="Enter Username" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
