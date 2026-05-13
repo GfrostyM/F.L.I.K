@@ -146,4 +146,16 @@
         app:layout_constraintVertical_bias="0.469"
         app:srcCompat="@drawable/help" />
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="304dp"
+        android:layout_height="52dp"
+        android:text="[Username]"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
