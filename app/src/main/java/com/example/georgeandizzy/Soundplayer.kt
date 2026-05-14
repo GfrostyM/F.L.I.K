@@ -3,13 +3,13 @@ package com.example.georgeandizzy
 import android.content.Context
 import android.media.MediaPlayer
 
-class Soundplayer {
-    fun playpop(context: Context) {
-        val popsound = MediaPlayer.create(context, R.raw.swoosh_sound)
-        popsound.setOnCompletionListener {
+object Soundplayer {
+    fun playSwoosh(context: Context) {
+        val popSound = MediaPlayer.create(context, R.raw.swoosh_sound)
+        popSound.setOnCompletionListener {
             it.release()
         }
 
-        popsound.start()
+        popSound.start()
     }
 }
