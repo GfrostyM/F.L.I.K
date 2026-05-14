@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         button = findViewById(R.id.button)
         button.setOnClickListener {
             val intent = Intent(this, HomePage::class.java)
-            SoundPlayer.playFlick(this)
+            SoundPlayer.playSwoosh(this)
 
             startActivity(intent)
         }
