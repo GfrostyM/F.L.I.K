@@ -1,8 +1,10 @@
 package com.example.georgeandizzy
 
+import android.adservices.ondevicepersonalization.InferenceInput
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -10,6 +12,9 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     lateinit var button: Button
+    lateinit var textInput: EditText
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -21,11 +26,20 @@ class MainActivity : AppCompatActivity() {
         }
 
         button = findViewById(R.id.button)
+        textInput = findViewById(R.id.editTextTextEmailAddress)
+
         button.setOnClickListener {
+            val name = textInput.text.toString().trim()
             val intent = Intent(this, HomePage::class.java)
             SoundPlayer.playSwoosh(this)
 
+            intent.putExtra("username", name)
+
+
+
             startActivity(intent)
+
         }
+
     }
 }

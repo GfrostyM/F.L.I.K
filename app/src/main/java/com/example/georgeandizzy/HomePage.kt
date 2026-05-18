@@ -1,12 +1,15 @@
 package com.example.georgeandizzy
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class HomePage : AppCompatActivity() {
+    lateinit var titleUsername : TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -16,5 +19,8 @@ class HomePage : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        titleUsername = findViewById(R.id.textView4)
+        val name = intent.getStringExtra("username")
+        titleUsername.text = "Hi ${name ?: "User"}"
     }
 }
