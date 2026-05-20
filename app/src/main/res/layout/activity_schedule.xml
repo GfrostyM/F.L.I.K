@@ -14,8 +14,8 @@
         android:layout_width="235dp"
         android:layout_height="66dp"
         android:text="Schedule"
-        android:textSize="50dp"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="41dp"
+        android:textSize="50dp"
+        tools:layout_editor_absoluteX="88dp"
         tools:layout_editor_absoluteY="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
