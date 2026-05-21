@@ -11,11 +11,20 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="235dp"
-        android:layout_height="66dp"
+        android:layout_width="205dp"
+        android:layout_height="63dp"
         android:text="Schedule"
         android:textColor="@color/white"
         android:textSize="50dp"
-        tools:layout_editor_absoluteX="88dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="34dp" />
+
+    <Button
+        android:id="@+id/backButton1"
+        android:layout_width="91dp"
+        android:layout_height="51dp"
+        android:text="Back"
+        tools:layout_editor_absoluteX="12dp"
         tools:layout_editor_absoluteY="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
