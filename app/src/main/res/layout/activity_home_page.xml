@@ -13,7 +13,7 @@
         android:layout_width="381dp"
         android:layout_height="153dp"
         android:backgroundTint="#a476ff"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintBottom_toTopOf="@+id/buttonChat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/buttonHelp"
         android:layout_width="381dp"
         android:layout_height="153dp"
         android:layout_marginBottom="20dp"
@@ -34,24 +34,24 @@
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/buttonAccount"
         android:layout_width="381dp"
         android:layout_height="153dp"
         android:layout_marginBottom="4dp"
         android:backgroundTint="#a476ff"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintBottom_toTopOf="@+id/buttonHelp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/buttonChat"
         android:layout_width="381dp"
         android:layout_height="153dp"
         android:layout_marginBottom="4dp"
         android:backgroundTint="#a476ff"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAccount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
@@ -75,10 +75,10 @@
         android:text="Chats"
         android:textColor="@color/white"
         android:textSize="50dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button7"
-        app:layout_constraintEnd_toEndOf="@+id/button7"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonChat"
+        app:layout_constraintEnd_toEndOf="@+id/buttonChat"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/button7" />
+        app:layout_constraintTop_toTopOf="@+id/buttonChat" />
 
     <TextView
         android:id="@+id/textView3"
@@ -88,9 +88,9 @@
         android:text="Account"
         android:textColor="@color/white"
         android:textSize="50dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button6"
-        app:layout_constraintEnd_toEndOf="@+id/button6"
-        app:layout_constraintTop_toTopOf="@+id/button6" />
+        app:layout_constraintBottom_toBottomOf="@+id/buttonAccount"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAccount"
+        app:layout_constraintTop_toTopOf="@+id/buttonAccount" />
 
     <TextView
         android:id="@+id/textView5"
@@ -99,10 +99,10 @@
         android:text="Help"
         android:textColor="@color/white"
         android:textSize="50dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button5"
-        app:layout_constraintEnd_toEndOf="@+id/button5"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonHelp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonHelp"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/button5" />
+        app:layout_constraintTop_toTopOf="@+id/buttonHelp" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -120,19 +120,19 @@
         android:layout_width="119dp"
         android:layout_height="112dp"
         android:layout_marginStart="28dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button7"
-        app:layout_constraintStart_toStartOf="@+id/button7"
-        app:layout_constraintTop_toTopOf="@+id/button7"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonChat"
+        app:layout_constraintStart_toStartOf="@+id/buttonChat"
+        app:layout_constraintTop_toTopOf="@+id/buttonChat"
         app:srcCompat="@drawable/chats" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/button6"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonAccount"
         app:layout_constraintEnd_toStartOf="@+id/textView3"
-        app:layout_constraintStart_toStartOf="@+id/button6"
-        app:layout_constraintTop_toTopOf="@+id/button6"
+        app:layout_constraintStart_toStartOf="@+id/buttonAccount"
+        app:layout_constraintTop_toTopOf="@+id/buttonAccount"
         app:srcCompat="@drawable/icon" />
 
     <ImageView
@@ -140,9 +140,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button5"
-        app:layout_constraintStart_toStartOf="@+id/button5"
-        app:layout_constraintTop_toTopOf="@+id/button5"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonHelp"
+        app:layout_constraintStart_toStartOf="@+id/buttonHelp"
+        app:layout_constraintTop_toTopOf="@+id/buttonHelp"
         app:layout_constraintVertical_bias="0.469"
         app:srcCompat="@drawable/help" />
 

@@ -13,6 +13,9 @@ import androidx.core.view.WindowInsetsCompat
 class HomePage : AppCompatActivity() {
     lateinit var titleUsername : TextView
     lateinit var button: Button
+    lateinit var buttonChat: Button
+    lateinit var buttonAccount: Button
+    lateinit var buttonHelp: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,8 +35,29 @@ class HomePage : AppCompatActivity() {
         button.setOnClickListener {
             val intent = Intent(this, Schedule::class.java)
 
+
             startActivity(intent)
 
+        }
+        buttonChat = findViewById(R.id.buttonChat)
+        buttonChat.setOnClickListener {
+            val intent = Intent(this, Chats::class.java)
+
+            startActivity(intent)
+        }
+
+        buttonAccount = findViewById(R.id.buttonAccount)
+        buttonAccount.setOnClickListener {
+            val intent = Intent(this, Account::class.java)
+
+            startActivity(intent)
+        }
+
+        buttonHelp = findViewById(R.id.buttonHelp)
+        buttonHelp.setOnClickListener {
+            val intent = Intent(this, Help::class.java)
+
+            startActivity(intent)
         }
     }
 }
