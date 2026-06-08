@@ -1,5 +1,6 @@
 package com.example.georgeandizzy
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -10,7 +11,10 @@ import androidx.core.view.WindowInsetsCompat
 
 class Help : AppCompatActivity() {
 
+    lateinit var  buttonBack4: Button
 
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -19,6 +23,13 @@ class Help : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        buttonBack4 = findViewById(R.id.buttonBack4)
+        buttonBack4.setOnClickListener {
+            val intent = Intent(this, HomePage::class.java)
+
+            startActivity(intent)
         }
     }
 }

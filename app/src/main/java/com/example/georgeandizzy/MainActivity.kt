@@ -1,6 +1,5 @@
 package com.example.georgeandizzy
 
-import android.adservices.ondevicepersonalization.InferenceInput
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -25,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        button = findViewById(R.id.button)
+        button = findViewById(R.id.buttonBack4)
         textInput = findViewById(R.id.editTextTextEmailAddress)
 
         button.setOnClickListener {

@@ -1,6 +1,5 @@
 package com.example.georgeandizzy
 
-import android.adservices.ondevicepersonalization.InferenceInput
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -31,7 +30,7 @@ class HomePage : AppCompatActivity() {
         val name = intent.getStringExtra("username")
         titleUsername.text = "Hi ${name ?: "User"}"
 
-        button = findViewById(R.id.button)
+        button = findViewById(R.id.buttonBack4)
         button.setOnClickListener {
             val intent = Intent(this, Schedule::class.java)
 
