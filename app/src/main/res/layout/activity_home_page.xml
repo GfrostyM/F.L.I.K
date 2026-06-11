@@ -25,7 +25,7 @@
         android:id="@+id/buttonHelp"
         android:layout_width="381dp"
         android:layout_height="153dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="4dp"
         android:backgroundTint="#a476ff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,6 @@
         android:id="@+id/buttonAccount"
         android:layout_width="381dp"
         android:layout_height="153dp"
-        android:layout_marginBottom="4dp"
         android:backgroundTint="#a476ff"
         app:layout_constraintBottom_toTopOf="@+id/buttonHelp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,10 +48,10 @@
         android:id="@+id/buttonChat"
         android:layout_width="381dp"
         android:layout_height="153dp"
-        android:layout_marginBottom="4dp"
         android:backgroundTint="#a476ff"
         app:layout_constraintBottom_toTopOf="@+id/buttonAccount"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
@@ -166,9 +165,9 @@
         android:layout_width="81dp"
         android:layout_height="147dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintHorizontal_bias="0.881"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/flik"
-        tools:layout_editor_absoluteY="-24dp" />
+        tools:layout_editor_absoluteY="-14dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
