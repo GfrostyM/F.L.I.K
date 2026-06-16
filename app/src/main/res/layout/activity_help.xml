@@ -24,8 +24,31 @@
         android:id="@+id/buttonBack4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Return"
         tools:layout_editor_absoluteX="14dp"
         tools:layout_editor_absoluteY="18dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="339dp"
+        android:layout_height="74dp"
+        android:text="How to navigate the app"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="133dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="221dp"
+        android:layout_height="160dp"
+        android:text="- Located in the top left of every page there will be a
+back button that you can use to return to the previous page when ever you need.
+                              -Click on the different tabs to go to the indicated page.
+         -To go into a chat simply just click on to the chat where it is displayed on the
+chats page."
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="207dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
