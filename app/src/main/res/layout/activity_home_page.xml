@@ -149,6 +149,7 @@
         android:id="@+id/textView4"
         android:layout_width="304dp"
         android:layout_height="52dp"
+        android:layout_marginTop="26dp"
         android:text="[Username]"
         android:textColor="@color/white"
         android:textSize="40dp"
@@ -167,7 +168,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.881"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/flik"
-        tools:layout_editor_absoluteY="-14dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flik" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
