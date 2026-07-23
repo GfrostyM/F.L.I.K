@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -16,6 +16,8 @@
         android:text="Schedule"
         android:textColor="@color/white"
         android:textSize="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/backButton1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="34dp" />
@@ -35,8 +37,31 @@
         android:text="Tasks"
         android:textColor="@color/white"
         android:textSize="30dp"
+        android:layout_below="@id/textView6"
+        android:layout_centerHorizontal="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="106dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView18"
+        android:nestedScrollingEnabled="true"
+        android:layout_marginTop="10dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/add"
+        android:backgroundTint="#A374BD"/>
+
+
+
+</RelativeLayout>
