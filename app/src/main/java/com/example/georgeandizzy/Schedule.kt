@@ -2,6 +2,7 @@ package com.example.georgeandizzy;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
@@ -9,8 +10,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.georgeandizzy.Utils.DataBaseHelper;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Schedule extends AppCompatActivity {
+
+    RecyclerView recyclerView;
+    FloatingActionButton addButton;
+    DataBaseHelper myDB;
 
     private Button backButton1;
 
@@ -31,6 +40,16 @@ public class Schedule extends AppCompatActivity {
             );
             return insets;
         });
+
+        recyclerView = findViewById(R.id.recyclerView);
+        addButton = findViewById(R.id.addButton);
+        myDB = new DataBaseHelper(Schedule.this);
+
+        addButton.setOnClickListener(new View.OnClickListener() {
+                                         @Override
+                                         public void onClick(View view) {
+                                         }
+                                     });
 
         backButton1 = findViewById(R.id.backButton1);
 
