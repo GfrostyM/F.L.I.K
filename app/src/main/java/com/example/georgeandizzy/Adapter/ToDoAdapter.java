@@ -1,9 +1,12 @@
 package com.example.georgeandizzy.Adapter;
 
+import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -40,6 +43,16 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> 
         final ToDoModel item = mList.get(position);
         holder.checkBox.setText(item.getTask());
         holder.checkBox.setChecked(toBoolean(item.getStatus()));
+        holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compundButton, boolean b) {
+                if (compundButton.isChecked()){
+                    myDB.updateStatus(item.getId(), 1);
+                }else {
+                    myDB.updateStatus(item.getId(), 0);
+                }
+            }
+        });
 
     }
 
@@ -47,9 +60,33 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> 
         return num!=0;
     }
 
+    public Context getContext(){
+        return activity;
+    }
+
     @Override
     public int getItemCount() {
         return mList.size();
+    }
+
+    public void setTasks(List<ToDoModel> mList){
+        this.mList = mList;
+        notifyDataSetChanged();
+    }
+
+    public void deleteTask(int position){
+        ToDoModel item = mList.get(position);
+        myDB.deleteTask(item.getId());
+
+        mList.remove(position);
+        notifyItemRemoved(position);
+    }
+
+    public void editItems(int position){
+        ToDoModel item = mList.get(position);
+        Bundle bundle = new Bundle();
+        bundle.putInt("Id", item.getId());
+        bundle.putString("task", item.getTask());
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
