@@ -1,5 +1,6 @@
 package com.example.georgeandizzy;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,16 +11,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.georgeandizzy.Adapter.ToDoAdapter;
+import com.example.georgeandizzy.Model.ToDoModel;
 import com.example.georgeandizzy.Utils.DataBaseHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class Schedule extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
+public class Schedule extends AppCompatActivity implements OnDialogCloseListener{
 
     RecyclerView recyclerView;
     FloatingActionButton addButton;
     DataBaseHelper myDB;
+    private List<ToDoModel> mList;
+    private ToDoAdapter adapter;
 
     private Button backButton1;
 
@@ -44,10 +55,21 @@ public class Schedule extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         addButton = findViewById(R.id.addButton);
         myDB = new DataBaseHelper(Schedule.this);
+        mList = new ArrayList<>();
+        adapter = new ToDoAdapter(myDB, Schedule.this);
+
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
+
+        mList = myDB.getAllTasks();
+        Collections.reverse(mList);
+        adapter.setTasks(mList);
 
         addButton.setOnClickListener(new View.OnClickListener() {
                                          @Override
                                          public void onClick(View view) {
+                                             AddNewTask.newInstance().show(getSupportFragmentManager(), AddNewTask.TAG);
                                          }
                                      });
 
@@ -57,5 +79,13 @@ public class Schedule extends AppCompatActivity {
             Intent intent = new Intent(Schedule.this, HomePage.class);
             startActivity(intent);
         });
+    }
+
+    @Override
+    public void onDialogClose(DialogInterface dialogInterface) {
+        mList = myDB.getAllTasks();
+        Collections.reverse(mList);
+        adapter.setTasks(mList);
+        adapter.notifyDataSetChanged();
     }
 }
