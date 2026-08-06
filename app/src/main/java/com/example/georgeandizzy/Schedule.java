@@ -20,7 +20,6 @@ import com.example.georgeandizzy.Utils.DataBaseHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
